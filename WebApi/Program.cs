@@ -1,5 +1,6 @@
 using Microsoft.OpenApi.Models;
 using WebApi.Constants;
+using WebApi.Structs;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,11 +30,11 @@ app.UseHttpsRedirection();
 
 app.MapControllers();
 
-app.MapGet("/version/number/{number}", async (int number) =>
+app.MapGet("/version/numbers/{number}", async (int number) =>
 {
-    return await Versions.GetNumber(number);
+    return Results.Ok(await Versions.GetInfo(number));
 })
-.Produces<int>(StatusCodes.Status200OK)
+.Produces<VersionView>(StatusCodes.Status200OK)
 .Produces(StatusCodes.Status500InternalServerError)
 .WithName("GetVersion")
 .WithTags("Version");
