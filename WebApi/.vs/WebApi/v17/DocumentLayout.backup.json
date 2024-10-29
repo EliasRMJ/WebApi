@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,10 +42,6 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -60,7 +56,7 @@
               "RelativeDocumentMoniker": "Constants\\Versions.cs",
               "ToolTip": "C:\\Meus Projetos GUI\\SGS V_W\\WebApi\\WebApi\\Constants\\Versions.cs",
               "RelativeToolTip": "Constants\\Versions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAACAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-01T13:46:29.632Z",
               "EditorCaption": ""
@@ -75,8 +71,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T13:34:30.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T13:34:30.55Z"
             }
           ]
         }
