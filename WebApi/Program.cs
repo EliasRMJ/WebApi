@@ -6,6 +6,7 @@ using WebApi.Structs;
 var builder = WebApplication.CreateBuilder(args);
 var allowSpecificOrigins = "_allowSpecificOrigins";
 
+builder.Services.AddMemoryCache();
 builder.Services.AddControllers();
 builder.Services.AddCors(options =>
 {
