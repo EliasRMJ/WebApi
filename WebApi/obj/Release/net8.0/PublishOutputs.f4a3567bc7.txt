@@ -5,7 +5,10 @@ C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\WebApi.
 C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\WebApi.deps.json
 C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\WebApi.runtimeconfig.json
 C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\WebApi.pdb
+C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\BouncyCastle.Cryptography.dll
+C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\MailKit.dll
 C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\Microsoft.OpenApi.dll
+C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\MimeKit.dll
 C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
 C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Release\net8.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
