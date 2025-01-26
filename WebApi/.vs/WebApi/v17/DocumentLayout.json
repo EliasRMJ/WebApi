@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Meus Projetos GUI\\SGS V_W\\WebApi\\WebApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A19755D-C25C-4E16-B612-DBD02168FB8F}|WebApi.csproj|c:\\meus projetos gui\\sgs v_w\\webapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A19755D-C25C-4E16-B612-DBD02168FB8F}|WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4A19755D-C25C-4E16-B612-DBD02168FB8F}|WebApi.csproj|c:\\meus projetos gui\\sgs v_w\\webapi\\webapi\\constants\\versions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A19755D-C25C-4E16-B612-DBD02168FB8F}|WebApi.csproj|solutionrelative:constants\\versions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A19755D-C25C-4E16-B612-DBD02168FB8F}|WebApi.csproj|c:\\meus projetos gui\\sgs v_w\\webapi\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A19755D-C25C-4E16-B612-DBD02168FB8F}|WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,6 +38,10 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
@@ -45,30 +49,33 @@
               "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Versions.cs",
               "DocumentMoniker": "C:\\Meus Projetos GUI\\SGS V_W\\WebApi\\WebApi\\Constants\\Versions.cs",
               "RelativeDocumentMoniker": "Constants\\Versions.cs",
               "ToolTip": "C:\\Meus Projetos GUI\\SGS V_W\\WebApi\\WebApi\\Constants\\Versions.cs",
               "RelativeToolTip": "Constants\\Versions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA7AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAACFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-15T13:12:11.241Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Meus Projetos GUI\\SGS V_W\\WebApi\\WebApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Meus Projetos GUI\\SGS V_W\\WebApi\\WebApi\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAAADkAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-01T13:34:30.55Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-01T13:34:30.55Z"
             }
           ]
         }

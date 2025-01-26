@@ -18,7 +18,7 @@ builder.Services.AddCors(options =>
                                            , "https://operation.servicenow.app.br"
                                            , "https://servicenow.app.br"
                                            , "https://web.servicenow.app.br");
-                          policy.WithMethods("GET", "POST", "PUT");
+                          policy.WithMethods("GET", "POST");
                           policy.WithHeaders("Authorization", "Content-Type");
                       });
 });
