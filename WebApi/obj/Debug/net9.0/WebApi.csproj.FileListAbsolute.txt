@@ -38,3 +38,7 @@ C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Debug\net9.0\refint\WebApi.dll
 C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Debug\net9.0\WebApi.pdb
 C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Debug\net9.0\WebApi.genruntimeconfig.cache
 C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\obj\Debug\net9.0\ref\WebApi.dll
+C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\bin\Debug\net9.0\CommunityToolkit.HighPerformance.dll
+C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\bin\Debug\net9.0\Minio.dll
+C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\bin\Debug\net9.0\System.IO.Hashing.dll
+C:\Meus Projetos GUI\SGS V_W\WebApi\WebApi\bin\Debug\net9.0\System.Reactive.dll

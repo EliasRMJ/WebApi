@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <PackageReference Include="MailKit" Version="4.8.0" />
+    <PackageReference Include="Minio" Version="6.0.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
