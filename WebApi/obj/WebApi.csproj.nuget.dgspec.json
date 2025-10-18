@@ -55,13 +55,33 @@
               "target": "Package",
               "version": "[4.8.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.10, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Minio": {
               "target": "Package",
               "version": "[6.0.4, )"
             },
+            "PersistenceNet": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Quiron.Mail": {
+              "target": "Package",
+              "version": "[1.4.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[7.2.0, )"
             }
           },
           "imports": [

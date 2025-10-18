@@ -11,12 +11,22 @@
     "version": "v1"
   },
   "paths": {
-    "/mail/send": {
-      "post": {
+    "/mail/send/organizations/{organizationCode}": {
+      "patch": {
         "tags": [
           "Mail"
         ],
-        "operationId": "PostMail",
+        "operationId": "PatchMail",
+        "parameters": [
+          {
+            "name": "organizationCode",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -39,7 +49,7 @@
             }
           },
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -51,125 +61,42 @@
         }
       }
     },
-    "/minio/buckets/{bucketID}/prefixs/{prefix}": {
-      "get": {
+    "/mail/send/create-or-replace": {
+      "post": {
         "tags": [
-          "Minio"
+          "Mail"
         ],
-        "operationId": "GetList",
-        "parameters": [
-          {
-            "name": "bucketID",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
+        "operationId": "PostMail",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MailInfoViewModel"
+              }
             }
           },
-          {
-            "name": "prefix",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
+          "required": true
+        },
         "responses": {
-          "200": {
-            "description": "Success",
+          "400": {
+            "description": "Bad Request",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VersionView"
+                  "$ref": "#/components/schemas/ReturnMessage"
                 }
               }
             }
           },
-          "500": {
-            "description": "Server Error"
-          }
-        }
-      }
-    },
-    "/minio/buckets/{bucketID}/objects/{key}": {
-      "get": {
-        "tags": [
-          "Minio"
-        ],
-        "operationId": "GetObject",
-        "parameters": [
-          {
-            "name": "bucketID",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "key",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/VersionView"
+                  "$ref": "#/components/schemas/ReturnMessage"
                 }
               }
             }
-          },
-          "500": {
-            "description": "Server Error"
-          }
-        }
-      }
-    },
-    "/minio/buckets/{bucketID}/keys/{key}": {
-      "delete": {
-        "tags": [
-          "Minio"
-        ],
-        "operationId": "DelObject",
-        "parameters": [
-          {
-            "name": "bucketID",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "key",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Success",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/VersionView"
-                }
-              }
-            }
-          },
-          "500": {
-            "description": "Server Error"
           }
         }
       }
@@ -193,7 +120,7 @@
         ],
         "responses": {
           "200": {
-            "description": "Success",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -203,7 +130,7 @@
             }
           },
           "500": {
-            "description": "Server Error"
+            "description": "Internal Server Error"
           }
         }
       }
@@ -211,6 +138,14 @@
   },
   "components": {
     "schemas": {
+      "ActiveEnum": {
+        "enum": [
+          0,
+          1
+        ],
+        "type": "integer",
+        "format": "int32"
+      },
       "EmailStruct": {
         "type": "object",
         "properties": {
@@ -236,9 +171,113 @@
           },
           "userSsl": {
             "type": "boolean"
+          },
+          "mailAttachments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MailAttachment"
+            },
+            "nullable": true
+          },
+          "messagePriority": {
+            "$ref": "#/components/schemas/MessagePriority"
           }
         },
         "additionalProperties": false
+      },
+      "MailAttachment": {
+        "type": "object",
+        "properties": {
+          "base64": {
+            "type": "string",
+            "nullable": true
+          },
+          "fileName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MailInfoViewModel": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "isDelete": {
+            "type": "boolean"
+          },
+          "isCheck": {
+            "type": "boolean"
+          },
+          "isNew": {
+            "type": "boolean",
+            "readOnly": true
+          },
+          "isActive": {
+            "type": "boolean"
+          },
+          "organizationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "identifyObject": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "viewId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "className": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "accountMail": {
+            "type": "string",
+            "nullable": true
+          },
+          "active": {
+            "$ref": "#/components/schemas/ActiveEnum"
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          },
+          "port": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "secureConnection": {
+            "$ref": "#/components/schemas/ActiveEnum"
+          },
+          "server": {
+            "type": "string",
+            "nullable": true
+          },
+          "urlLogo": {
+            "type": "string",
+            "nullable": true
+          },
+          "companyName": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MessagePriority": {
+        "enum": [
+          0,
+          1,
+          2
+        ],
+        "type": "integer",
+        "format": "int32"
       },
       "ReturnMessage": {
         "type": "object",
@@ -288,6 +327,19 @@
         },
         "additionalProperties": false
       }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "apiKey",
+        "description": "Insira o JWT como: Bearer {Seu token}",
+        "name": "Authorization",
+        "in": "header"
+      }
     }
-  }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
 }
